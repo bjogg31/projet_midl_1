@@ -16,4 +16,5 @@ def main():
     print(f"Liste des variables : {liste_var(f)}")
     print(f"Forme Négative      : {negative(f)}")
 
-main()
+if __name__ == "__main__":
+    main()

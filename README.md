@@ -1,7 +1,7 @@
 # Projet MIDL 1
 
 ## Membres du groupe :
-- Bourdoncle Ethan 
+- Bourdoncle Ethan 22509129
 - Mabilat Oyana 22503949
 
 ## Description : 

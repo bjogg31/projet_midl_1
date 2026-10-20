@@ -2,7 +2,9 @@
 test_formules.py
 Fichier contenant les fonctions sur les formules, 4.1
 """
-from datastructs import FF, Var, Not, And, Or, Impl, Form, Seq
+
+from datastructs import FF, Var, Not, And, Or, Impl, Form
+
 
 def nb_feuilles(f:Form) -> int:
     match f:
@@ -43,4 +45,3 @@ def negative(f:Form) -> Form:
             return Or(negative(Not(a)), negative(b))
 
         case _: return f
-    

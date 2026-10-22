@@ -6,6 +6,7 @@ Fichier de test et d'exécution des fonctions
 from datastructs import Var, FF, And, Not, Or, Impl, Seq
 from test_formules import nb_feuilles, liste_var, negative
 from regles_calcul_tableaux import calculus
+from moteur_preuve import next_proof_state
 
 
 def get_affichage_liste_sequents(liste_sequents: list[Seq]) -> str:
@@ -25,7 +26,7 @@ def get_affichage_liste_sequents(liste_sequents: list[Seq]) -> str:
     return affichage
 
 def main():
-    f = Impl(And(Var("a"),FF()), Not(Var("b")))
+    f = Impl(And(Var("a"), FF()), Not(Var("b")))
 
     print("___________________________________________")
     print("TEST MANIPULATION DE FORMULES")
@@ -51,6 +52,22 @@ def main():
     for rule in calculus:
         print(f"  - {rule.rulename:^11} : {get_affichage_liste_sequents(rule.action([], s))}")
     print()
+
+
+    p, q = Var("p"), Var("q")
+    s1 = Seq([Or(Not(p), q), Not(And(p, q)), Not(Not(p)), Not(p)], FF())
+    s2 = Seq([Or(Not(p), q), Not(And(p, q)), Not(Not(p)), q], FF())
+    ps = [s1, s2]
+
+    print("___________________________________________")
+    print("TEST MOTEUR PREUVE")
+    print("___________________________________________")
+    print(f"Etat de preuve :\n{get_affichage_liste_sequents(ps)}")
+    print()
+    print(f"---- Liste des états de preuve suivants ----")
+    for ps_i in next_proof_state(ps):
+        print(get_affichage_liste_sequents(ps_i))
+        print()
 
 
 if __name__ == "__main__":

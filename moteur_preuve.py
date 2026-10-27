@@ -3,11 +3,8 @@ moteur_preuve.py
 Fichier gérant l'application des règles et la recherche de preuve basiques, 4.3.1
 """
 
-from datastructs import FF, Var, Not, Or, And, Impl, Form, Seq, Rule
+from datastructs import Form, Seq, Rule, ProofStateV0
 from regles_calcul_tableaux import calculus
-
-
-ProofStateV0 = list[Seq]
 
 
 # ---------------------------------------------------------------------------
@@ -33,7 +30,6 @@ def application_sur_ieme(proof_state: ProofStateV0, i: int, rule: Rule, fs: list
     new_proof_state.pop(i)
 
     return new_proof_state[:i] + new_sequents + new_proof_state[i:]
-
 
 
 # ---------------------------------------------------------------------------

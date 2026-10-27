@@ -7,6 +7,7 @@ from datastructs import Var, FF, And, Not, Or, Impl, Seq
 from test_formules import nb_feuilles, liste_var, negative
 from regles_calcul_tableaux import calculus
 from moteur_preuve import next_proof_state
+from recherche_preuve import prove_seq_v0
 
 
 def get_affichage_liste_sequents(liste_sequents: list[Seq]) -> str:
@@ -60,7 +61,7 @@ def main():
     ps = [s1, s2]
 
     print("___________________________________________")
-    print("TEST MOTEUR PREUVE")
+    print("TEST MOTEUR DE PREUVE")
     print("___________________________________________")
     print(f"Etat de preuve :\n{get_affichage_liste_sequents(ps)}")
     print()
@@ -68,6 +69,14 @@ def main():
     for ps_i in next_proof_state(ps):
         print(get_affichage_liste_sequents(ps_i))
         print()
+
+
+    print("___________________________________________")
+    print("TEST RECHERCHE DE PREUVE V0")
+    print("___________________________________________")
+    print(f"Séquent à prouver     :    {s}")
+    print(f"Résultat de la preuve :    {prove_seq_v0(s)}")
+    print()
 
 
 if __name__ == "__main__":

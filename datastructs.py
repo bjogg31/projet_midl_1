@@ -63,11 +63,11 @@ Form = Union[
 # ---------------------------------------------------------------------------
 
 
-def hyps_in_str(list):
+def hyps_in_str(liste):
     hyps_str = ""
-    for i in range (len(list)-1):
-        hyps_str += str(list[i]) + ", "
-    hyps_str += str(list[len(list)-1])
+    for i in range (len(liste)-1):
+        hyps_str += str(liste[i]) + ", "
+    hyps_str += str(liste[len(liste)-1])
     return hyps_str
 
 

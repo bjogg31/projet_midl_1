@@ -4,7 +4,7 @@ Fichier contenant le code des règles du calcul des Tableaux, 4.2
 """
 
 #TODO: justifier le choix des conditions d'applicabilité dans le rapport
-from datastructs import FF, Var, Not, Or, And, Impl, Form, Seq, Rule, Calculus
+from datastructs import FF, Not, Or, And, Impl, Form, Seq, Rule, Calculus
 
 
 # ---------------------------------------------------------------------------

@@ -3,7 +3,7 @@ test_formules.py
 Fichier contenant les fonctions sur les formules, 4.1
 """
 
-from datastructs import FF, Var, Not, And, Or, Impl, Form
+from datastructs import Var, Not, And, Or, Impl, Form
 
 
 def nb_feuilles(f:Form) -> int:

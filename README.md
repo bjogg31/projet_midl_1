@@ -12,7 +12,7 @@ L'objectif de cette première partie est la mise en place de la représentation 
 - 'datastructs.py'            : Fichier de définitions des structures de données
 - 'test_formules.py'          : Fichier contenant les fonctions sur les formules, 4.1
 - 'regles_calcul_tableaux.py' : Fichier contenant le code des règles du calcul des Tableaux, 4.2
-- 'moteur_preuve.py'          : Fichier gérant l'application des règles et la recherche de preuve basiques, 4.3.1
+- 'moteur_preuve.py'          : Fichier gérant l'application des règles et la recherche de preuve basiques, 4.3.1 et 4.3.2
 - 'recherche_preuve.py'       : Fichier gérant la recherche de preuve de manière récursive sur un état de preuve donné, 4.4
 - 'main.py'                   : Fichier de test et d'exécution des fonctions
 
